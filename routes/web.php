@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/index',[ProjectController::class,'index'])->name('home');
+Route::get('/products',[ProjectController::class,'products'])->name('products');
