@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     function index(){
-        return view('index');
+        $products=DB::table('products')->get();
+        return view('index',['products'=>$products]);
+    }
+
+    function product(){
+        $products=DB::table('products')->get();
+        return view('products',['products'=>$products]);
     }
 }

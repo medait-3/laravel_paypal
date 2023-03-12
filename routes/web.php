@@ -15,3 +15,4 @@ use app\Http\Controllers\ProjectController;
 
 Route::get('/index',[ProjectController::class,'index'])->name('home');
 Route::get('/products',[ProjectController::class,'products'])->name('products');
+Route::get('/single_product',[ProjectController::class,'single_product'])->name('single_product');
